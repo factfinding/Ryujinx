@@ -59,6 +59,10 @@ namespace ARMeilleure.Translation
             {
                 return CodeGen.Arm64.CodeGenerator.Generate(cctx);
             }
+            else if (target == Architecture.LoongArch64)
+            {
+                return CodeGen.LoongArch64.CodeGenerator.Generate(cctx);
+            }
             else
             {
                 throw new NotImplementedException(target.ToString());
